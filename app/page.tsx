@@ -29,7 +29,7 @@ export default function Home() {
   const [transcript, setTranscript] = useState("");
   const [assessment, setAssessment] = useState<Assessment | null>(null);
   const [candidateName, setCandidateName] = useState("");
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<InstanceType<typeof window.SpeechRecognition> | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const transcriptRef = useRef("");
 
